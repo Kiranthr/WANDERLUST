@@ -1,7 +1,7 @@
 import express from 'express';
 const router=express.Router();
 import wrapAsync from '../utils/wrapAsync.js';
-import ExpressError from '../utils/expressError.js';
+import ExpressError from '../utils/ExpressError.js';
 import {listingSchema,reviewSchema} from '../schema.js';
 import Listing from '../models/Listing.js';
 import { isLoggedIn ,isOwner,isvalidateListing} from '../middleware.js';
