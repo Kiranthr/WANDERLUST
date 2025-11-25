@@ -100,11 +100,12 @@ app.use('/',user);
 // });
 
 // Error handling middleware
-app.use((err,req,res,next)=>{
-    let {statuscode=500,message='Something went wrong'}=err;
-    res.status(statuscode).render("listings/Error.ejs",{message});
-    
+
+app.use((err, req, res, next) => {
+  let { status = 500, message = "Something went wrong" } = err;
+  res.status(status).send(message);
 });
+
 app.listen(3000, () => {
     console.log('Server is listening on port 3000');
 });
