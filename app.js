@@ -74,6 +74,9 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+app.get("/", (req, res) => {
+  res.render("listings/index.ejs");
+});
 
 
 app.get('/demouser',async(req,res)=>{
