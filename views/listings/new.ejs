@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2" >
+    <h3>Create New Listing</h3>
+    <br>
+    <form method="POST" action="/Listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div>
+         <label for="Title" class="form-label">Title</label>
+        <input name="listing[title]" placeholder="Enter a Catchy title" type="text" class="form-control" required>
+        <div class="valid-feedback">
+      Looks good!
+    </div><div class="invalid-feedback">
+        Please provide a valid title.
+      </div>
+
+        </div>
+        <br><div>
+        <label for="Description" class="form-label">Description</label>
+        <textarea name="listing[description]" class="from-control" required></textarea>
+    <div class="invalid-feedback">
+        Please provide a valid description.
+      </div></div>
+        <br>
+        <div>
+        <label for="Image" class="form-label">Upload Listing image</label>
+        <input name="listing[image]"  type="file" class="form-control" required></div>
+        <br>
+        <div class="row mb-3" > 
+        <div class="  col-md-4">
+        <label for="Price" class="form-label">Price</label>
+        <input name="listing[price]" placeholder="1500"  class="form-control" required>
+    <div class="invalid-feedback">
+        Please provide a valid Price.
+      </div></div>
+        <br>
+        <div class=" col-md-8">
+        <label for="Location" class="form-label">Location</label>
+        <input name="listing[location]" placeholder="Bengaluru,karnataka" type="text" class="form-control" required>
+    </div>
+        <br><br></div><div class="mb-3">
+        <label for="Country" class="form-label">Country</label>
+        <input name="listing[country]" placeholder="India" type="text" class="form-control" required>
+    <div class="invalid-feedback">
+        Please provide a valid Country.
+      </div></div>
+        <br><br>
+        <button class="btn btn-dark add-btn mb-3">ADD</button>
+    </form>
+    </div>
+    </div>
+</body>
